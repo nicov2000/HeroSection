@@ -1,165 +1,165 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Varela Round", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
 }
 
 body{
-    background: url("../img/hero.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top center;
-    height: 100vh;
-    position: relative;
-    z-index: 0;
+  background: url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top center;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
 }
 
 body::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 100;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
 
-    background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.5);
 }
 
 main {
-    position: relative;
-    z-index: 1000;
-    color: #eee;
-    height: 100vh;
+  position: relative;
+  z-index: 1000;
+  color: #eee;
+  height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
-    padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 100px;
 }
 
 .titles-container{
-    margin-right: 4%;
-    font-size: 20px;
-    font-weight: bold;
-    width: 85%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    color: #ccc;
+  margin-right: 4%;
+  font-size: 20px;
+  font-weight: bold;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  color: #ccc;
 }
 
 .greeting  {
-    font-size: 50px;
-    margin-bottom: 125px;
+  font-size: 50px;
+  margin-bottom: 125px;
 }
 
 .fullname {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .role {
-    font-size: 35px;
-    margin-bottom: 30px;
+  font-size: 35px;
+  margin-bottom: 30px;
 }
 
 #about-me {
-    margin-right: 4%;
-    color: #eee;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    border: 3px solid rgb(23, 172, 23);
-    padding: 10px 25px;
-    border-radius: 20px;
+  margin-right: 4%;
+  color: #eee;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid rgb(23, 172, 23);
+  padding: 10px 25px;
+  border-radius: 20px;
 
-    transition: all 0.3s;
+  transition: all 0.3s;
 
-    animation-name: stimulus;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
+  animation-name: stimulus;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 
 @keyframes stimulus {
-    0%{
-        border-color: 3px solid rgb(23, 172, 23);
-    }
+  0%{
+      border-color: 3px solid rgb(23, 172, 23);
+  }
 
-    100% {
-        border-color: 3px solid rgb(23, 172, 23);
-        box-shadow: 0 0 10px 3px rgb(23, 172, 23);
-    }
+  100% {
+      border-color: 3px solid rgb(23, 172, 23);
+      box-shadow: 0 0 10px 3px rgb(23, 172, 23);
+  }
 }
 
 
 #about-me:hover {
-    background-color: rgb(26, 209, 26, 0.9);
-    box-shadow: 0 0 10px 3px rgb(26, 209, 26, 0.9);
+  background-color: rgb(26, 209, 26, 0.9);
+  box-shadow: 0 0 10px 3px rgb(26, 209, 26, 0.9);
 
-    animation: none;
+  animation: none;
 }
 
 @media screen and (min-width: 768px){
 
-    main {
-        justify-content: flex-start;
-        gap: 0;
-        padding-top: 40vh;
-    }
+  main {
+    justify-content: flex-start;
+    gap: 0;
+    padding-top: 40vh;
+  }
 
-    .titles-container {
-        text-align: center;
-    }
+  .titles-container {
+    text-align: center;
+  }
 
-    .greeting {
-        margin-bottom: 30px;
-        font-size: 70px;
-    }
-    
-    .fullname {
-        font-size: 35px;
-    }
-    
-    .role {
-        font-size: 50px;
-        margin-bottom: 30px;
-    }
-    
+  .greeting {
+    margin-bottom: 30px;
+    font-size: 70px;
+  }
+  
+  .fullname {
+    font-size: 35px;
+  }
+  
+  .role {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  
 
-    #about-me {
-        margin-top: 10vh;
-        font-size: max(25px,1.6vw);
-        border-radius: max(25px, 1.35vw);
+  #about-me {
+    margin-top: 10vh;
+    font-size: max(25px,1.6vw);
+    border-radius: max(25px, 1.35vw);
 
-    }
+  }
 }
 
 @media screen and (min-width: 1050px){
     
-    main {
-        padding-top: 25vh;
-    }
+  main {
+    padding-top: 25vh;
+  }
 
-    .titles-container {
-        margin-right: 0;
-        text-align: left;
-    }
+  .titles-container {
+    margin-right: 0;
+    text-align: left;
+  }
 
-    #about-me {
-        margin-top: 25vh;
-    }
+  #about-me {
+    margin-top: 25vh;
+  }
 }
 
 .gradient {
-    background-image: linear-gradient(90deg, rgb(52, 226, 52), rgb(30, 218, 243));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  background-image: linear-gradient(90deg, rgb(52, 226, 52), rgb(30, 218, 243));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
