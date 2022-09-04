@@ -24,7 +24,6 @@ body::before{
   height: 100vh;
   width: 100%;
   z-index: 100;
-
   background: rgba(0,0,0,0.5);
 }
 
@@ -32,7 +31,7 @@ main {
   position: relative;
   z-index: 1000;
   color: #eee;
-  height: 100vh;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -43,6 +42,7 @@ main {
 }
 
 .titles-container{
+  user-select: none;
   margin-right: 4%;
   font-size: 20px;
   font-weight: bold;
@@ -52,9 +52,18 @@ main {
   gap: 10px;
   text-align: center;
   color: #ccc;
+
 }
 
-.greeting  {
+.titles-container > * {
+  transition: text-shadow 0.3s;
+}
+
+.titles-container > *:hover {
+  text-shadow: 0 0 3px #fff;  
+}
+
+.greeting {
   font-size: 50px;
   margin-bottom: 125px;
 }
@@ -74,36 +83,18 @@ main {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  border: 3px solid rgb(23, 172, 23);
   padding: 10px 25px;
+
+  border: 3px solid rgb(23, 172, 23);
   border-radius: 20px;
-
-  transition: all 0.3s;
-
-  animation-name: stimulus;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+  box-shadow: 0 0 10px 5px rgb(23, 172, 23);
+  transition: all 0.45s;
 }
-
-@keyframes stimulus {
-  0%{
-      border-color: 3px solid rgb(23, 172, 23);
-  }
-
-  100% {
-      border-color: 3px solid rgb(23, 172, 23);
-      box-shadow: 0 0 10px 3px rgb(23, 172, 23);
-  }
-}
-
 
 #about-me:hover {
-  background-color: rgb(26, 209, 26, 0.9);
-  box-shadow: 0 0 10px 3px rgb(26, 209, 26, 0.9);
-
-  animation: none;
+  border-color: transparent !important;
+  box-shadow: none;
+  text-shadow: 0 0 3px #fff !important;
 }
 
 @media screen and (min-width: 768px){
@@ -135,14 +126,17 @@ main {
 
   #about-me {
     margin-top: 10vh;
-    font-size: max(25px,1.6vw);
-    border-radius: max(25px, 1.35vw);
+    font-size: 25px;
+    border-radius: 20px;
+  }
 
+  #about-me:hover {
+    font-size: 27.5px;
   }
 }
 
 @media screen and (min-width: 1050px){
-    
+
   main {
     padding-top: 25vh;
   }
@@ -162,4 +156,25 @@ main {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  text-shadow: none !important;
+}
+
+@media screen and (min-width: 1921px){   
+  body::before,
+  body {
+    margin: 0 auto;
+    max-width: 1920px;
+  }
+
+  body {
+    background-size: initial;
+  }
+
+  main {
+    padding-top: 300px;
+  }
+
+  #about-me {
+    margin-top: 250px;
+  }
 }
